@@ -1,0 +1,74 @@
+class Usuarios{
+    nombre 
+    apellido
+    libros
+    animales
+    constructor(nombre,apellido,libros,animales){
+        this.nombre = nombre; //string
+        this.apellido = apellido; //string
+        this.libros = libros; // array de objetos [{}]
+        this.animales = animales; // array de string ["",""]
+    }
+    getFullName(){
+        //utilizando template string
+        console.log(`Mi nombre es: ${this.nombre} ${this.apellido}.`);
+    }
+    addMascota(mascota){
+        //funcion tipo Void
+        this.animales.push(mascota);
+
+    }
+    countMascotas(){
+        //utilizar length
+        const countMascotas = this.animales.length;
+        console.log(`La cantidad de mascotas son ${countMascotas}.`);
+    }
+    addBook(libro,autor){
+        //funcion tipo Void 
+        this.libros.push({nombre:libro, autor:autor})
+    }
+    getBookNames(){
+        const arrayObjLibros =  this.libros //consigo el array de objetos
+        let arrayLibros =[]; //creo un array vacio
+        for(let libro of arrayObjLibros){arrayLibros.push(libro.nombre) } //itero los libros y los agrego al array vacio
+        console.log(arrayLibros); //muestro los nombres de los libros del usuario
+    
+            
+    }
+}
+// crear un obj con valores arbitrarios e invocar todos los metodos
+const usuario = {
+    nombre:'sebastian',
+    apellido:'Liberona',
+    libros:[{nombre:"Sol y Fuego", Autor:'pedro'},{nombre:"Hielo y Fuego", Autor:'juan'}],
+    animales:["aramis","alices","coraje"]
+}
+const usuario1 = new Usuarios(
+    'Valentina', //nombre
+    'Herrera', //apellido
+    [{nombre:'1984', Autor:'George Orwell'},
+    {nombre:'principitos', Autor:'Antoine de Saint-Exupery'}],//libros
+    ['Puchini','Lobito','Pelusa'] //mascotas
+    );
+
+//ejecutar los metodos.
+usuario1.getFullName(); //Mi nombre es Valentina Herrera.
+usuario1.countMascotas(); // La cantidad de mascotas son 3.
+usuario1.addMascota('Michu'); // agrega una mascota 
+usuario1.countMascotas(); // La cantidad de mascotas son 4.
+usuario1.getBookNames() // ['1984','principitos']
+usuario1.addBook('Harry Potter','J.K. Rowling') // agrega un libro
+usuario1.getBookNames() // ['1984','principitos','Harry Potter']
+
+//pasando un objeto como parametros.
+
+const usuario2 = new Usuarios(usuario.nombre,usuario.apellido,usuario.libros,usuario.animales);
+usuario2.getFullName(); //Mi nombre es Sebastian Liberona.
+usuario2.countMascotas(); // La cantidad de mascotas son 3.
+usuario2.addMascota('Michu'); // agrega una mascota 
+usuario2.countMascotas(); // La cantidad de mascotas son 4.
+usuario2.getBookNames() // ['Sol y Fuego','Hielo y Fuego']
+usuario2.addBook('Harry Potter','J.K. Rowling') // agrega un libro
+usuario2.getBookNames() // ['Sol y Fuego','Hielo y Fuego'',Harry Potter']
+
+//Trabajo numero 1 de backend

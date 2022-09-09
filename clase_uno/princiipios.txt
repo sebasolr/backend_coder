@@ -1,0 +1,33 @@
+Clase 1
+principios del backend;
+
+Objetivos, entender algunas diferencias entre el front y el backend,
+Que es el front y el backend
+ el front, es el cliente,la vista
+ el back es el servidor, base de datos, enrutamiento
+
+ el front interactua con los usuarios. lado del cliente, es todo lo que se ve en
+ la pantalla. 
+
+ el backend son aplicaciones que viven en el servidor, el lado del servidor, 
+ toman datos, se procesa informacion y se le envia al usario.
+
+ las api las brinda el backend
+
+ MERN stack  esto es lo mas solicitado. react hay que profundizar.
+ mongo expressjs reactjs nodejs
+
+ javascrip es el unico lenguaje.
+
+react libreria para desarrollar intefaces de usuarios
+monguodb, base de datos no relacionales.
+expressjs es el framework, gestionar sesiones y cookies, 
+reacctjs es la libreria para crear interfaces de usarios aplicaicones de una sola pagina
+nodejs, entonrno de ejecucion multiplataforma async, arquitectura orientada a eventos
+
+
+js en el front. la consola web.
+
+console.table(["hola1",'HOla2']) da una tabla con su indices 
+
+un bloque es lo que esta dentro de dos llaves. MUTABILIDADS Y CONST 
